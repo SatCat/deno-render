@@ -1,5 +1,4 @@
-import { serve } from "https://deno.land/std@0.123.0/http/server.ts";
-
+// import { serve } from "https://deno.land/std@0.123.0/http/server.ts";
 const port = 10000;
 
 const handler = (request: Request): Response => {
@@ -11,4 +10,6 @@ const handler = (request: Request): Response => {
 };
 
 console.log(`HTTP webserver running on port ${port}.`);
-await serve(handler, { hostname: "0.0.0.0", port: port });
+
+//await serve(handler, { hostname: "0.0.0.0", port: port });
+Deno.serve({ port, hostname: "0.0.0.0" }, handler);
