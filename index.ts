@@ -5,7 +5,7 @@ let hourlyCounter = 0;
 
 setInterval(() => {
   hourlyCounter++;
-}, 6000);
+}, 60*1000);
 
 const handler = (request: Request): Response => {
   let body = "Hello from Deno 2+!\n\n";
